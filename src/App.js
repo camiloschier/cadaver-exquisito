@@ -2,33 +2,39 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Container from 'react-bootstrap/Container';
-import Card from 'react-bootstrap/Card';
 import {Col,Row} from 'react-bootstrap'
-
-import Formulario from './components/Formulario/Formulario'
-import Titulo from './components/Titulo/Titulo'
-import Captcha from './components/Captcha'
-import Logo from './components/Logo'
+import { BrowserRouter as Router } from 'react-router-dom';
+import Navigation from './components/Navigation';
 
 function App() {
   return (
-    <Container className="contenedor">
-      <Row className="fila">
-        <Col sm={12} md={12} lg={12}>
-          <Titulo/>
-          <Card >
-            <Card.Body>
+    <Router>
+      <Navigation />
+
+      <hr />
+      <Route exact path={ROUTES.LANDING} component={LandingPage} />
+      <Route path={ROUTES.SIGN_UP} component={SignUpPage} />
+      <Route path={ROUTES.SIGN_IN} component={SignInPage} />
+    </Router>
+
+
+    // <Container className="contenedor">
+    //   <Row className="fila">
+    //     <Col sm={12} md={12} lg={12}>
+    //       <Titulo/>
+    //       <Card >
+    //         <Card.Body>
               
-                <Formulario/>
-                {/* <Captcha/> */}
+    //             <Formulario/>
+    //             {/* <Captcha/> */}
                 
-            </Card.Body>
-            {/* <Logo/> */}
-          </Card>
-        </Col>
-      </Row>
-    </Container>
+    //         </Card.Body>
+    //         {/* <Logo/> */}
+    //       </Card>
+    //     </Col>
+    //   </Row>
+    // </Container>
+    
   );
 }
 
