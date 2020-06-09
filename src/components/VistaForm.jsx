@@ -3,8 +3,8 @@ import { Row, Col} from 'react-bootstrap';
 import Container from 'react-bootstrap/Container';
 import Card from 'react-bootstrap/Card';
 
-import Formulario from './components/Formulario/Formulario'
-import Titulo from './components/Titulo/Titulo'
+import Formulario from './Formulario/Formulario'
+import Titulo from './Titulo/Titulo'
 const VistaForm = () =>{
     
     
